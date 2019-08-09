@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <img style="width: 100%" ; height="250px" src="baner.png">
+    <form action="mostrarparametro.jsp" method="get">
+        <p>
+            <label>Nombre</label><input type="text" name="edNombre" /><br>
+            <label>Apellido</label><input type="text" name="surname" /><br>
+        </p>
+        <p>
+            Tipo de flor:
+            <select name="flower_type">
+                <option value="flores azules">flores azules</option>
+                <option value="flores verdes">flores verdes</option>
+                <option value="flores rojas">flores rojas</option>
+                <option value="flores amarillas">flores amarillas</option>
+            </select>
+        </p>
+        <p>
+            <textarea name="memo" rows="5" cols="80" placeholder="comentarios"></textarea>
+        </p>
+        <p>
+            <input type="radio" name="entrega" value="envio" />Enviar
+            <input type="radio" name="entrega" value="retira" checked="retira" />Retira del negocio
+        </p>
+        <input type="submit" name="btnEnviar" value="Enviar" />
+    </form>
+    <ul>
+        <li><a href="index.html">inicio</a></li>
+    </ul>
+</body>
+
+</html>
