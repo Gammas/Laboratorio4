@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> JS - CALCULADORA </title>
+    <link rel = "stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="calculadora-contenedor">
+        <div id="visor" class="calculadora-visor">Visor</div>
+        <div class="calculadora-botones">
+            <div class="funciones">
+                <input type="button" value="+" onclick="sumar()">
+                <input type="button" value="-" onclick="restar()">
+                <input type="button" value="*" onclick="multiplicar()">
+                <input type="button" value="/" onclick="dividir()">
+                <input type="button" value="Limpiar" onclick="limpiarVisor()">
+            <div class="numeros">
+                <br>
+                <input type="button" value="1" onclick="agregarnumero(value)">
+                <input type="button" value="2" onclick="agregarnumero(value)">
+                <input type="button" value="3" onclick="agregarnumero(value)">
+                <br>
+                <input type="button" value="4" onclick="agregarnumero(value)">
+                <input type="button" value="5" onclick="agregarnumero(value)">
+                <input type="button" value="6" onclick="agregarnumero(value)">
+                <br>
+                <input type="button" value="7" onclick="agregarnumero(value)">
+                <input type="button" value="8" onclick="agregarnumero(value)">
+                <input type="button" value="9" onclick="agregarnumero(value)">
+                <br>
+                <input type="button" value="0" onclick="agregarnumero(value)">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="archivo.js"></script>
+</body>
+
+</html>
