@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <div>
+        <p id="parrafo1">Hello Word!</p>
+    </div>
+
+    <form>
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+        <span onclick="saludar()">Saludar</span>
+        <p id="salida"></p>
+    </form>
+    <script type="text/javascript">
+        function saludar() {
+            var editor = document.getElementById("nombre");
+            var editsalidaor = document.getElementById("salida");
+            salida.innerHTML = editor.value;
+            alert("Hola " + editor.value);
+        }
+        //alert("Hello Word!");
+        //console.log("Hello Word!");
+        //document.write("Hola Mundo!");
+        //document.getElementById("parrafo1").innerHTML = "Otra Cosa!";
+    </script>
+</body>
+
+</html>

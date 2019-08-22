@@ -1,0 +1,45 @@
+<!DOCTYPE htmlm>
+<html>
+
+<head>
+    <title>Agenda Acme!!!</title>
+</head>
+
+<body>
+    <h1> Agenda Acme</h1>
+    <table id="tabla" border="1">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        var datos = [
+            { id: 1, nombre: "Juan", Telefono: "555-12983" },
+            { id: 2, nombre: "Maria", Telefono: "667-65432" },
+            { id: 3, nombre: "Jose", Telefono: "no tiene" }
+        ];
+
+        function mostrarDatos() {
+            let tabla = document.getElementById("tabla");
+            datos.forEach(c => {
+                let fila = tabla.insertRow(-1);
+                fila.insertCell(0).innerHTML = c.id;
+                fila.insertCell(1).innerHTML = c.nombre;
+                fila.insertCell(2).innerHTML = c.Telefono;
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function(){
+            console.log("El documento ya se cargo");
+        })
+
+        mostrarDatos();
+    </script>
+</body>
+
+</html>>
