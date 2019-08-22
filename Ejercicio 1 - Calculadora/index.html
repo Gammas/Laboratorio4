@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1 class="copyright">CALCULADORA - &copy;ACME</h1>
+    <div class="contenedor">  <!-- CONTENEDOR -->
+      <div class="calculadora"> <!-- CALCULADORA -->
+        <div class="visor"> <!-- VISOR -->
+          <span id="visorOperacion" class="operacion"></span>
+          <span id="visorResultado" class="resultado">0</span>
+        </div>
+        <div class="botones"> <!-- BOTONES -->
+            <input class="botones-funciones" type="button" value="C"  onclick="guardarHistoria(true)">
+            <input class="botones-funciones boton-largo" type="button" id="historiaBoton" value="HISTORIA" onclick="mostrarOcultarHistoria()">
+            <input class="botones-funciones" type="button" value="CE"  onclick="limpiarHistoria();mostrarOcultarHistoria()">
+
+            <input class="botones-especiales" type="button" value="-" onclick="operar(value)">
+            <input class="botones-especiales" type="button" value="+" onclick="operar(value)">
+            <input class="botones-especiales" type="button" value="/" onclick="operar(value)">
+            <input class="botones-especiales" type="button" value="*" onclick="operar(value)">
+            
+            <input type="button" value="7" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="8" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="9" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="0" onclick="escribirNumerosEnVisor(value)">
+            
+            <input type="button" value="4" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="5" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="6" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value=",">
+            
+            <input type="button" value="1" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="2" onclick="escribirNumerosEnVisor(value)">
+            <input type="button" value="3" onclick="escribirNumerosEnVisor(value)">
+            <input class="boton-igual" type="button" value="=" onclick="obtenerResultado()">
+        </div>
+      </div>
+      <div id="historia" class="historia" onclick="mostrarOcultarHistoria()">
+        <div class="header">
+          <h4>HISTORIA</h4>
+        </div>
+        <div id="historiaListado"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+input:focus {
+  outline: none;
+}
+
+.contenedor {
+  background-color: white;
+  background: linear-gradient(to bottom, white 0%, rgba(0,0,0,.1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.calculadora {
+  width: 270px;
+  height: 400px;
+  background-color: rgb(71,77,85);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #494f57 20%, #2a2b2e 100%);
+  z-index: 30;
+  overflow: hidden;
+  
+  animation-name: forma;
+  animation-duration: 1s;
+}
+
+.visor {
+  background-color: whitesmoke;
+  height: 65px;
+  margin: 30px 20px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+
+.visor > .resultado {
+  color: rgba(0,0,0,.6);
+  font-size: 2em;
+  padding: 0 30px;
+}
+
+.visor > .operacion {
+  color: rgba(0,0,0,.4);
+  font-size: 1em;
+  padding: 0 30px;
+}
+
+.botones {
+  margin: 0 20px;
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.botones > input {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  margin: 0 5px;
+  box-shadow: 0;
+  color: rgba(255,255,255,.6);
+  border-radius: 100%;
+  background-color: rgba(0,0,0,.01);
+  cursor: pointer;
+  transition: ease-in .2s;
+  
+  animation-name: crecer;
+  animation-duration: 1s;
+}
+
+.botones > input:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.botones-especiales {
+  color: #7be47d !important;
+  font-size: 1em;
+}
+
+input.botones-funciones {
+  color: #7be47d;
+  width: 40px;
+  border: 1px solid #7be47d;
+  border-radius: 25px;
+  font-size: .6em;
+  height: 30px;
+}
+
+input.boton-largo {
+  width: 90px;
+}
+
+input.boton-igual {
+  background-color: #7be47d;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  font-size: 1.5em;
+
+  animation-name: crecer;
+  animation-duration: 1s;
+}
+
+input.boton-igual:hover {
+  position: relative;
+  background-color: #8cda8d;
+  transform: scale(1.2);
+}
+
+input.activado {
+  background-color: #7be47d;
+  color: white;
+}
+
+input.activado:hover {
+  background-color: #43c146;
+  border-color: #43c146;
+}
+
+.copyright {
+  color: rgba(0,0,0,.7);
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.historia {
+  transition: all .3s;
+  background-color: white;
+  border-radius: 0 20px 20px 0;
+  width: fit-content;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  z-index: 10;
+  color: rgba(0,0,0,.3);
+  max-height: 310px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 45%;
+  opacity: 0;
+
+  animation-name: opacidad;
+  animation-duration: 3s;
+}
+
+.historia.ver {
+  left: 57%;
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > input {
+  background-color: rgba(255, 96, 96, .8);
+  font-size: .6em;
+  color: white;
+  border: 0;
+  height: 22px;
+  width: 21px;
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+#historiaListado {
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 20px;
+}
+
+@keyframes forma {
+  0% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+  60% {
+    width: 290px;
+    height: 450px;
+  }
+  100% {
+    opacity: 1;
+    width: 270px;
+    height: 400px;
+  }
+}
+
+@keyframes crecer {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes opacidad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
