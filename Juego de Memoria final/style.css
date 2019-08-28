@@ -1,0 +1,35 @@
+/* Sombrear cada celda al pasar */
+
+td:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 141px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 141px -5px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 141px -5px rgba(0,0,0,0.75);
+}
+
+/* espacio entre carta y borde */
+.espacio {
+    padding: 5px;
+}
+
+/*Centrar <table>*/
+
+.centrado {
+        margin: 0px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+
+/* auto ajustar tamaño de imagen */
+.imagen {
+    max-width: 75%;
+    max-height: 100%;
+}
+
+/* Centrar <tr> */
+.center {
+    text-align: center;  
+  }
